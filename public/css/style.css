@@ -17,6 +17,7 @@ h2 {
 ul {
     padding: 0;
     text-align: left;
+    list-style: circle inside;
 }
 
 ul li {
