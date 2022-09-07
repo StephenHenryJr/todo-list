@@ -30,7 +30,7 @@ ul li span {
 }
 
 .completed{
-    color: gray;
+    color: rgb(179, 69, 10);
     text-decoration: line-through;
 }
 
