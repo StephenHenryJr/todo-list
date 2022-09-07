@@ -38,14 +38,14 @@
                 <% } %>
             </ul>
 
+           <div class="form-container">
             <h2>Left to do: <%= left %></h2>
-
             <h2>Add A Todo:</h2>
-
             <form action="/addTodo" method="POST">
                 <input type="text" placeholder="Add a ToDo..." name="todoItem">
                 <input type="submit">
             </form>
+           </div>
         </div>
 
         <script src='js/main.js'></script>
