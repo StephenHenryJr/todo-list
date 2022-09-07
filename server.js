@@ -50,7 +50,7 @@ app.get('/', async (request, response) => {
 // Comes from  the action on the form in our HTML
 app.post('/addTodo', (request, response) => {
     db.collection('todos').insertOne({
-            thing: request.body.todoItem,
+            toDo: request.body.todoItem,
             completed: false
         })
         .then(result => {
@@ -62,7 +62,7 @@ app.post('/addTodo', (request, response) => {
 
 app.put('/markComplete', (request, response) => {
     db.collection('todos').updateOne({
-            thing: request.body.itemFromJS
+            toDo: request.body.itemFromJS
         }, {
             $set: {
                 completed: true
@@ -83,7 +83,7 @@ app.put('/markComplete', (request, response) => {
 
 app.put('/markUnComplete', (request, response) => {
     db.collection('todos').updateOne({
-            thing: request.body.itemFromJS
+            toDo: request.body.itemFromJS
         }, {
             $set: {
                 completed: false
@@ -104,7 +104,7 @@ app.put('/markUnComplete', (request, response) => {
 
 app.delete('/deleteItem', (request, response) => {
     db.collection('todos').deleteOne({
-            thing: request.body.itemFromJS
+            toDo: request.body.itemFromJS
         })
         .then(result => {
             console.log('Todo Deleted')
